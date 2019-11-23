@@ -19,7 +19,7 @@ En caso de no tener (PHP, NodeJS, MySQL o RabbitMQ) ejecutar el archivo `install
 Instalación inicial para realizar correctamente la POC.
 - Crear una base de datos llamada `microservice_db`. 
 - Dentro de la carpeta `microserviceA` ejecutar el comando `php artisan migrate` que creará una tabla en dicha base llamada `product`.
-- Ingresar a `http://localhost:15672/` y crear un virtual host llamado `test` y dentro de él una queue llamada `products`.
+- Ingresar a `http://localhost:15672/` (usuario `guest` y contraseña `guest`), crear un virtual host llamado `test` y dentro de él una queue llamada `products`.
 - Dentro de la carpeta `microserviceA` ejecutar el comando `php artisan serve`.
 - Dentro de la carpeta `microserviceB` ejecutar la siguiente sentencia: `npm install && npm start`.
 - Dentro de la carpeta `microserviceC` ejecutar el comando `npm install`.
