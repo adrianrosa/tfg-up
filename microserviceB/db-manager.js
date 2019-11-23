@@ -14,7 +14,7 @@ class DbManager {
     insert(msg) {
         return new Promise((resolve, reject) => {
             let messageObject = JSON.parse(msg);
-            let product = messageObject.payload;
+            let product = messageObject.payload.product;
             let timestamp = messageObject.timestamp;
             let sql = "INSERT INTO product (id_product, name, price, stock, timestamp) VALUES (DEFAULT, '" + product.name + "', " + product.price + ", " + product.stock + ", '" + timestamp + "')";
             this.connection.query(sql, function (err, result) {
