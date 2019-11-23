@@ -1,0 +1,15 @@
+config:
+  target: 'http://127.0.0.1:8000'
+  phases:
+    - duration: 10
+      arrivalRate: 150
+scenarios:
+  - flow:
+    - post:
+        url: '/api/publish-message'
+        json:
+          payload:
+            product:
+              name: "Product Test"
+              price: 100
+              stock: 5
