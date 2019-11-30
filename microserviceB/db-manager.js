@@ -16,7 +16,7 @@ class DbManager {
             let messageObject = JSON.parse(msg);
             let product = messageObject.payload.product;
             let timestamp = messageObject.timestamp;
-            let sql = "INSERT INTO product (id_product, name, price, stock, timestamp) VALUES (DEFAULT, '" + product.name + "', " + product.price + ", " + product.stock + ", '" + timestamp + "')";
+            let sql = "INSERT INTO product (id, name, price, stock, timestamp) VALUES (DEFAULT, '" + product.name + "', " + product.price + ", " + product.stock + ", '" + timestamp + "')";
             this.connection.query(sql, function (err, result) {
                 if (err) reject(err);
                 console.log(" [x] Received: %s", msg);
